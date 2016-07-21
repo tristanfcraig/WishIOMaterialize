@@ -1,0 +1,26 @@
+
+<%= form_for Item.new do |f| %>
+
+
+          <div class="field">
+            <%= f.label :Name %><br>
+            <%= f.text_field :name %>
+          </div>
+          <div class="field">
+            <%= f.label :Retailer %><br>
+            <%= f.text_field :retailer %>
+          </div>
+          <div class="field">
+            <%= f.label :Url %><br>
+            <%= f.text_field :url %>
+          </div>
+          <div class="field">
+            <%= f.label :Price %><br>
+            <%= f.number_field :price %>
+          </div>
+
+
+            <div class="modal-footer">
+            <%= f.submit :class=>'modal-action modal-close waves-effect btn-flat' %>
+          </div>
+        <% end %>

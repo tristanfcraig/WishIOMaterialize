@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WishIO</title>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <%= csrf_meta_tags %>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Shows the Menu Bar if User Authenticated -->
+    <% if user_signed_in? %>
+      <%= render 'layouts/header' %>
+  <% else %>
+  <% end %>
+
+    <!-- Shows Page Data -->
+  <div class="container">
+    <%= yield %>
+  </div>
+
+  <!-- Sign In/Out Alerts, Not Using right now
+  <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
+  -->
+
+  </body>
+</html>

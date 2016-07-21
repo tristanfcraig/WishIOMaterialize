@@ -1,0 +1,23 @@
+/* Sets the Defaul Color Values for Materialize to Deep Purple/Deep Purple */
+@import "materialize/components/color";
+$primary-color: color("deep-purple", "lighten-1") !default;
+$secondary-color: color("deep-purple", "lighten-1") !default;
+
+/* Imports Materialize */
+@import 'materialize';
+
+/* Sets the Container Width to Full Screen */
+.container {
+  max-width: 1440px;
+  width: auto;
+}
+
+/* Item Card Height */
+.card {
+  height: 370px;
+}
+
+/* Hyperlinked Elements appear Normal */
+a {
+  text-decoration: none;
+}

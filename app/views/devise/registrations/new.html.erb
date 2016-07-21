@@ -1,0 +1,62 @@
+<!-- Backgound Image -->
+<style>
+
+  body {
+    background-image: url('/assets/Pisa.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+</style>
+
+<!-- Sign Up Card -->
+<div class="card white" style=" height: 400px; width: 50%; position: absolute; top: 20%; left: 50%; transform: translate(-50%, -20%);">
+  <div class="card-content white-text">
+    <span class="card-title">
+      <p style="color:#000000">
+        Sign Up
+      </p>
+    </span>
+    <br>
+
+    <!-- Sign Up Form -->
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+      <%= devise_error_messages! %>
+
+      <!-- Email Field -->
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+
+      <!-- Password Field -->
+      <div class="field">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+
+      <!-- Password Confirmation Field -->
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
+
+      <!-- Sign Up Button and Back Button -->
+      <div>
+        <%= f.submit 'Sign Up', :class => 'waves-effect waves-deep-purple btn-flat' %>
+        <% end %>
+        <%= link_to "Back", root_path, :class=>'waves-effect waves-deep-purple btn-flat', :style=>"color:#000000" %>
+      </div>
+
+
+  </div>
+
+  <!-- Other Options -->
+  <%= render "users/shared/links" %>
+
+</div>

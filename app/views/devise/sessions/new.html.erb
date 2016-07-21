@@ -1,0 +1,58 @@
+<!-- Backgound Image -->
+<style>
+  body {
+    background-image: url('/assets/Greece.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+</style>
+
+<!-- Log In Card -->
+<div class="card white" style=" height: 400px; width: 50%;position: absolute; top: 20%; left: 50%; transform: translate(-50%, -20%);">
+  <div class="card-content white-text">
+    <span class="card-title">
+      <p style="color:#000000">
+        Log In
+      </p>
+    </span>
+    <br>
+
+    <!-- Log In Form -->
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+      <!-- Email Field -->
+      <div class="field"style="color:#000000">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+
+      <!-- Password Field -->
+      <div class="field"style="color:#000000">
+        <%= f.label :password %><br>
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+      <br>
+
+      <!-- Remember Me Checkbox -->
+      <% if devise_mapping.rememberable? -%>
+        <div class="field"style="color:#000000">
+          <%= f.check_box :remember_me, :class=>"filled-in"%>
+          <%= f.label :remember_me %>
+        </div>
+      <% end -%>
+      <br>
+
+      <!-- Sign Up Button and Back Button -->
+      <div>
+        <%= f.submit 'Log In', :class => 'waves-effect waves-deep-purple btn-flat' %>
+        <% end %>
+        <%= link_to "Back", root_path, :class=>'waves-effect waves-deep-purple btn-flat', :style=>"color:#000000" %>
+      </div>
+
+  </div>
+
+  <!-- Other Options -->
+  <%= render "users/shared/links" %>
+
+</div>
