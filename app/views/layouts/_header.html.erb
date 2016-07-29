@@ -1,17 +1,14 @@
+<div class="container" >
+
 <div class="navbar-fixed">
   <div class="nav-wrapper">
     <nav>
 
       <!-- Sidebar Navigation -->
       <ul id="slide-out" class="side-nav">
-
         <!-- Profile Info -->
         <li style = "background-image: url('/assets/Bird2.jpg'); background-repeat: none; background-size: 400px; height: 220px">
-          <a style="text-align:center; color:#FFFFFF">
-            <strong>
-              <%= current_user.email %>
-            <strong>
-          </a>
+
         </li>
 
         <!-- My List Button -->
@@ -34,7 +31,12 @@
           </a>
         </li>
 
+        <!-- Settings Button -->
+        <li class="bold">
+          <%= link_to "Settings", edit_user_registration_path%>
+        </li>
       </ul>
+
 
       <!-- Show Sidebar Navigation Button -->
       <ul class="left" data-hover="true">
@@ -48,7 +50,7 @@
 
         /* Sidebar Navigation Slide Out */
         $('.button-collapse').sideNav({
-          menuWidth: 300, // Default is 240
+          menuWidth: 300,  // Default is 240
           closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
         });
 
@@ -70,22 +72,27 @@
 
         <!-- Notifications Dropdown Trigger -->
         <a class = "dropdown-button" data-activates="notifications-dropdown" data-beloworigin="true" data-constrainwidth="false" data-hover="true" data-alignment="right">
-          <i class="material-icons" >notifications</i>
+          <i class="material-icons">notifications</i>
         </a>
 
         <!-- Account Dropdown -->
         <ul id="account-dropdown" class="dropdown-content">
-          <li><%= link_to "Edit Profile", edit_user_registration_path%></li>
+          <li><a>Search</a></li>
+          <li><a>Sort</a></li>
+          <li><a>Card Size</a></li>
+          <li><a>Night Mode</a></li>
           <li class="divider"></li>
           <li><%= link_to "Log Out", destroy_user_session_path, method: :delete%></li>
         </ul>
 
         <!-- Account Dropdown Trigger -->
         <a class = "dropdown-button" data-activates="account-dropdown" data-beloworigin="true" data-constrainwidth="false" data-hover="true">
-          <i class="material-icons">account_circle</i>
+          <i class="material-icons">more_vert</i>
         </a>
 
       </ul>
+
     </nav>
   </div>
+
 </div>

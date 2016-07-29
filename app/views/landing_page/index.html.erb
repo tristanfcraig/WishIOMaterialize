@@ -1,34 +1,80 @@
-
-<div class="navbar-fixed">
-  <nav>
-    <div class="nav-wrapper">
-      <ul class="left hide-on-med-and-down">
-      <a href="#!" class="brand-logo">  &nbsp;&nbsp; WISH.IO</a>
-    </ul>
-      <ul class="right ">
-        <li><a href="#">About</a></li>
-        <%= link_to "Log In", new_user_session_path%>
-        <%= link_to "Sign Up", new_user_registration_path%>
-      </ul>
-    </div>
-  </nav>
-</div>
-
-<div class="parallax-container">
+<%= render 'menu' %>
+<main>
+<div class="parallax-container" style="width:100%">
+<h1 class="header" style="color:#FFFFFF; text-align: center; margin-top: 60px">WISH.IO</h1>
+<h4 class="header" style="color:#FFFFFF; text-align: center; margin-top:-20px">Keep all your shopping in one place.</h4>
+<div class="row" style="text-align:center">
+<a href="/users/sign_up" class="waves-effect waves-light btn" style= "margin-top:4px">Get Started</a>
+<a class="waves-effect waves-light btn" style="margin-left:10px; margin-top:4px">Learn More</a></div>
    <div class="parallax">
-  <%= image_tag("Pisa.jpg", width: "1440") %>
+
+  <%= image_tag("Bird3.jpg", width: "1440") %>
    </div>
  </div>
  <div class="section white">
    <div class="row container" style="margin-left:5%">
-     <h2 class="header">Online Shopping all in one place.</h2>
-     <p class="grey-text text-darken-3 lighten-3">Parallax is so dope.</p>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     <h3 class="header">A truly universal wish list</h3>
+     <p class="grey-text text-darken-3 lighten-3" style="font-size: 18px">
+       Save, organize, and buy the products that you want within one unified ecosystem.
+     </p>
+     <br><br>
+     <h3 class="header">Online shopping that gives back</h3>
+     <p class="grey-text text-darken-3 lighten-3" style="font-size: 18px">
+     When you purchase items, you earn points that go toward discounts on products from your favorite stores.
+     </p>
+     <br><br>
+     <h3 class="header">Never miss another sale</h3>
+     <p class="grey-text text-darken-3 lighten-3" style="font-size: 18px">
+     Set up notifications for when your items go on sale or run low on stock.
+     </p>
+<br><br>
    </div>
  </div>
- <div style="width:100%" class="parallax-container" >
-   <div class="parallax" style="width:100%">
-  <%= image_tag("Greece.jpg", width: "1440") %>
+ <div style="width:100%" class="parallax-container">
+   <h4 class="header" style="color:#FFFFFF; text-align: center; margin-top:7.5%"><i>"Quote from some famous review website."</i></h4>
+   <h5 class="header" style="color:#FFFFFF; text-align: center; margin-top:5.5%">-Tristan Craig</h5>
+   <div class="parallax" style="width:103%">
+  <%= image_tag("Bird4.jpg", width: "1440") %>
+
 
    </div>
  </div>
+ <div class="section white">
+   <div class="row container" style="text-align:center;width:90%; margin-left:5%;margin-right:5%">
+
+
+<br><br><br><br>
+
+     <div class="col s4 m4 l4">
+       <i class="medium material-icons">bookmark</i><br><br>
+       <h5>Save</h5>
+       <br>
+       <div style="margin-left:5%;margin-right:5%">
+       Paste a URL, enter information, or click on an item's Wish Button to add it to your list.
+     </div>
+     </div>
+     <div class="col s4 m4 l4">
+       <i class="medium material-icons">assessment</i><br><br>
+       <h5>Manage</h5>
+       <br>
+       <div style="margin-left:5%;margin-right:5%">
+       Organize, prioritize, and track all of your items on any of your devices.
+     </div>
+     </div>
+     <div class="col s4 m4 l4">
+       <i class="medium material-icons">shopping_cart</i><br><br>
+       <h5>Purchase</h5>
+       <br>
+       <div style="margin-left:5%;margin-right:5%">
+       Make all of your puchases within Wish.IO to earn points and rewards at your favorite stores.
+     </div>
+     </div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+   </div>
+
+ </div>
+</div>
+</main>
+
+<%= render 'footer' %>

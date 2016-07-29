@@ -6,6 +6,10 @@ $secondary-color: color("deep-purple", "lighten-1") !default;
 /* Imports Materialize */
 @import 'materialize';
 
+/* Imports Font Awesome */
+@import "font-awesome";
+
+
 /* Sets the Container Width to Full Screen */
 .container {
   max-width: 1440px;
@@ -21,3 +25,15 @@ $secondary-color: color("deep-purple", "lighten-1") !default;
 a {
   text-decoration: none;
 }
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.bottom-sheet { width: 100% !important ; max-height: 100% !important } /* increase the width and height! */

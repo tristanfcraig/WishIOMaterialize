@@ -1,7 +1,6 @@
 <!-- Page Width -->
-<div class="container" style="width:97%">
-
-<div class="row">
+<div class="container" style="height:100%;width:97%">
+<div class="row" style = "margin-top:10px">
 
     <!-- Loop that Iterates through all a User's Items -->
     <% @items.each do |item| %>
@@ -17,11 +16,9 @@
 
           <!-- Item Info -->
           <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">
+            <span class="card-title activator grey-text text-darken-4 truncate">
               <%= item.name %>
-              <i class="material-icons right">more_vert</i>
             </span>
-            <br>
             <%= item.retailer %>
           </div>
 
@@ -63,27 +60,39 @@
 
   <ul>
 
-    <!-- New from URL Button -->
+    <!-- New from Input Button -->
     <li>
-      <a class="btn-floating deep-purple lighten-2 modal-trigger" href="#modal-new">
-        <i class="material-icons right">insert_link</i>
+      <a class="btn-floating deep-purple lighten-2 modal-trigger" href="#modal-new-url">
+      <i class="material-icons">insert_link</i>
       </a>
     </li>
 
-    <!-- New from Input Button -->
+    <!-- New from URL Button -->
     <li>
-      <%= link_to new_item_path, :class=>"btn-floating deep-purple lighten-2" do %>
-      <i class="material-icons">mode_edit</i>
-      <% end %>
+      <a class="btn-floating deep-purple lighten-2 modal-trigger" href="#modal-new-input">
+        <i class="material-icons right">mode_edit</i>
+      </a>
     </li>
+
 
   </ul>
 
 </div>
 
-<!-- New Item Modal -->
-<div id="modal-new" class="modal bottom-sheet">
+<!-- New Item from URLModal -->
+<div id="modal-new-url" class="modal bottom-sheet">
   <div class="modal-content">
+    <h4>New Item</h4>
+    <input id="url" type="text" class="validate">
+          <label for="url">Paste a URL Here</label>
+  </div>
+</div>
+
+
+<!-- New Item from Input Modal -->
+<div id="modal-new-input" class="modal bottom-sheet">
+  <div class="modal-content">
+    <h4>New Item</h4><br>
     <%= render 'form' %>
   </div>
 </div>
